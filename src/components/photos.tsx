@@ -24,7 +24,7 @@ export const Photos = () => {
       </div>
 
       <div ref={emblaRef} style={{ overflow: "hidden", borderRadius: "20px" }}>
-        <div className="flex">
+        <div className="flex max-w-[500px] gap-2">
           {[
             {
               before: "1.jpeg",
@@ -38,6 +38,13 @@ export const Photos = () => {
               <div key={index} style={{ minWidth: "100%" }} className="flex">
                 <img style={{ width: "50%" }} src={el.before} alt="before" />
                 <img style={{ width: "50%" }} src={el.after} alt="after" />
+              </div>
+            );
+          })}
+          {[9, 10, 11, 12, 13, 14, 15, 16, 17].map((el, index) => {
+            return (
+              <div key={index} style={{ minWidth: "100%" }} className="flex">
+                <img style={{ width: "100%" }} src={`${el}.jpeg`} alt="after" />
               </div>
             );
           })}
