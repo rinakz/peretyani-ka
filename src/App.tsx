@@ -1,8 +1,11 @@
+import { Contact } from "./components/contact";
 import { Header } from "./components/header";
 import { Main } from "./components/main";
-import { Photos } from "./components/photos";
+import { Services } from "./components/services";
 import { Price } from "./components/price";
 import { Review } from "./components/review";
+import { Photos } from "./components/photos";
+import { Footer } from "./components/footer";
 
 function App() {
   return (
@@ -15,9 +18,12 @@ function App() {
       </div>
       <div className="bg-[#f2f9fc]">
         <Price />
-        <Photos />
+        <Services />
       </div>
+      <Photos />
       <Review />
+      <Contact />
+      <Footer />
     </main>
   );
 }

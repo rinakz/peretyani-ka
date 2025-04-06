@@ -1,19 +1,52 @@
+import { useState } from "react";
+import { IconTelegram } from "../assets/IconTelegram";
+import { IconWhatsApp } from "../assets/IconWhatsApp";
+
 export const Main = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div className="px-8 py-16">
       <h1 className="text-4xl font-extrabold">
         Перетяжка <br /> мебели в Москве и Подмосковье
       </h1>
-      <p className="mt-6">
+      <p className="mt-6 font-serif">
         Вдохните новую жизнь в любимую мебель! Профессиональная перетяжка любой
         сложности. Быстро, качественно, с гарантией – вернём уют в ваш дом.
         <br />
         <br />
         Закажите бесплатную консультацию прямо сейчас!
       </p>
-      <button className="mt-6 px-4 py-2 text-white rounded-md bg-background">
-        Напишите нам{" "}
-      </button>
+      <div className="relative">
+        <button
+          onClick={toggleDropdown}
+          className="mt-6 px-4 py-2 text-white rounded-md bg-background"
+        >
+          Напишите нам{" "}
+        </button>
+        {isOpen && (
+          <div className="absolute bottom-14 w-48 flex gap-2">
+            <a
+              href="https://t.me/Marusia1024"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <IconTelegram />
+            </a>
+            <a
+              href="https://wa.me/79772747353"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <IconWhatsApp />
+            </a>
+          </div>
+        )}
+      </div>
       <div className="mt-6 flex gap-4">
         <div className="flex items-center">
           <svg
@@ -68,9 +101,9 @@ export const Main = () => {
 
         <span className="text-blue">Опыт</span>
       </div>
-      <div className="mt-6 text-blue">
+      <div className="mt-6 text-blue font-serif">
         "Перетяни-ка изменили мой дом 🤩"
-        <h1 className="text-lg mt-1 font-bold">Ярослав Салимов</h1>
+        <h1 className="text-lg mt-1 font-bold font-serif">Ярослав Салимов</h1>
       </div>
     </div>
   );

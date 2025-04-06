@@ -10,6 +10,7 @@ module.exports = {
       gray: "#898B94",
       primary: "#8BB900",
       red: "#F33939",
+      border: "rgb(148 163 184)",
     },
     extend: {},
   },
