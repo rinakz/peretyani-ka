@@ -1,3 +1,4 @@
+import { IconAvito } from "../assets/IconAvito";
 import { IconTG } from "../assets/IconTG";
 import { IconWhatsAppBlack } from "../assets/IconWhatsAppBlack";
 
@@ -17,6 +18,13 @@ export const Footer = () => {
         rel="noopener noreferrer"
       >
         <IconWhatsAppBlack />
+      </a>
+      <a
+        href="https://www.avito.ru/moskva/predlozheniya_uslug/peretyazhka_myagkoy_mebeli_7274476475?utm_campaign=native&utm_medium=item_page_ios&utm_source=soc_sharing"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <IconAvito />
       </a>
     </div>
   );
